@@ -1,0 +1,230 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* SLIDER IMAGE */
+.slider-images {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.slide-img {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-img.active {
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.prev {
+  left: 16px;
+}
+
+.next {
+  right: 16px;
+}
+
+/* SLIDER TEXT */
+.slider-text {
+  position: relative;
+  background: darkblue;
+  padding: 32px 64px 48px;
+  color: white;
+}
+
+.slide-content {
+  display: none;
+}
+
+.slide-content.active {
+  display: block;
+}
+
+.eyebrow {
+  font-size: 13px;
+  color: lightgray;
+  margin-bottom: 8px;
+}
+
+.slider-text h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: lightgray;
+  margin-bottom: 24px;
+  max-width: 500px;
+}
+
+.btns {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-solid {
+  padding: 10px 24px;
+  background: white;
+  color: darkblue;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn-ghost {
+  padding: 10px 24px;
+  border: 1.5px solid white;
+  color: white;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: gray;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dot.active {
+  background: white;
+}
+
+/* PRODUCTS */
+.products {
+  padding: 40px 24px;
+}
+
+.products h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  background: green;
+  aspect-ratio: 462 / 710;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px 12px;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.brand {
+  font-size: 11px;
+  color: white;
+  margin-bottom: 2px;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+}
+
+.prices {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.cur {
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+
+.old {
+  font-size: 12px;
+  color: lightgray;
+  text-decoration: line-through;
+}
+
+
+@media (max-width: 900px) {
+  .slider-text {
+    padding: 24px 32px 48px;
+  }
+
+  .slider-text h1 {
+    font-size: 28px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .slider-text {
+    padding: 20px 20px 48px;
+  }
+
+  .slider-text h1 {
+    font-size: 22px;
+  }
+
+  .btns {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
