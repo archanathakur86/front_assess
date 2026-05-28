@@ -221,7 +221,10 @@ a {
   }
 
   .btns {
-    flex-direction: column;
+     flex-direction: row;
+     gap: 12px;
+     justify-content: flex-start;
+     align-items: center;
   }
 
   .grid {
